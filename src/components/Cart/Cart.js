@@ -4,15 +4,17 @@ import CartItem from './CartItem';
 import { useSelector } from 'react-redux';
 const Cart = (props) => {
   const isCartVisible = useSelector(state => state.cart.isCartVisible);
+  const cartItems = useSelector(state => state.cart.cartItems);
   return (
     <div>
     { isCartVisible ? (
       <Card className={classes.cart}>
       <h2>Your Shopping Cart</h2>
       <ul>
-        <CartItem
-          item={{ title: 'Test Item', quantity: 3, total: 18, price: 6 }}
-        />
+        {
+          cartItems.map((item) => <CartItem item={item}></CartItem>)
+        }
+        
       </ul>
     </Card>
     ) : (<span style={{color:'white'}}>Cart is Empty!!</span>)
