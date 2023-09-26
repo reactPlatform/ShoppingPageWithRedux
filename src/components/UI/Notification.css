@@ -1,7 +1,21 @@
-.notificationContent{
+.sendingNotification{
     background-color: blue;
     color: white;
     display: flex;
     justify-content: space-around;
     padding: 10px;
+}
+.successNotification{
+    background-color: green;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.errorNotification{
+    background-color: rgb(255, 0, 68);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px; 
 }
